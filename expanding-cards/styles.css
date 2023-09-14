@@ -10,8 +10,60 @@ body {
   font-family: 'Roboto', sans-serif;
   display: flex;
   height: 100vh;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.container {
+  color: azure;
+  display: flex;
+  width: 90vw;
+  height: 90vh;
+  gap: 20px;
+}
+
+.panel {
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  flex: 0.5;
+  position: relative;
+  transition: all 700ms ease-in;
+}
+
+.panel-0 {
+  background-image: url(./images/image-1.jpg);
+}
+
+.panel-1 {
+  background-image: url(./images/image-2.jpg);
+}
+
+.panel-2 {
+  background-image: url(./images/image-3.jpg);
+}
+
+.panel-3 {
+  background-image: url(./images/image-4.jpg);
+}
+
+.panel-4 {
+  background-image: url(./images/image-5.jpg);
+}
+
+.active {
+  flex: 5;
+}
+
+h3 {
+  position: absolute;
+  font-size: 28px;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
