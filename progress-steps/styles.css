@@ -8,4 +8,62 @@
 
 body {
   font-family: 'Mulish', sans-serif;
+  height: 100vh;
+  background-color: #3d0c11;
+  color: #3d0c11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgb(247, 140, 162);
+  width: 30vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 5px solid rgb(249, 222, 201);
+  border-radius: 10px;
+}
+
+.progress-container {
+  display: flex;
+  width: inherit;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.progress-bar {
+  position: absolute;
+  width: inherit;
+  height: 5px;
+  background-color: #3d0c11;
+}
+
+.circle {
+  font-size: 36px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: rgb(249, 222, 201);
+  border-radius: 50%;
+  border: 5px solid #3d0c11;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+  font-family: 'Mulish', sans-serif;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 15px;
+  background-color: rgb(52, 52, 255);
+  color: azure;
+}
+
+button:hover {
+  color: rgb(52, 52, 255);
+  background-color: azure;
 }
