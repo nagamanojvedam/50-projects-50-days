@@ -37,18 +37,20 @@ body {
 
 .progress-bar {
   position: absolute;
-  width: inherit;
+  top: 50%;
+  width: 75%;
   height: 5px;
   background-color: #3d0c11;
 }
 
 .circle {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
   padding: 10px 20px;
   background-color: rgb(249, 222, 201);
   border-radius: 50%;
   border: 5px solid #3d0c11;
+  z-index: 1;
 }
 
 button {
