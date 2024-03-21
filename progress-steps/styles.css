@@ -5,3 +5,42 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Mulish';
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-container {
+  font-size: 2rem;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-item {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: 0.5rem solid rgba(0, 0, 255, 0.75);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar {
+  background-color: rgba(0, 0, 255, 0.75);
+  height: 0.5rem;
+  width: 80vw;
+  position: absolute;
+  z-index: -1;
+}
