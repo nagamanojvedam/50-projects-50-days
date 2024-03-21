@@ -19,28 +19,48 @@ body {
 }
 
 .progress-container {
-  font-size: 2rem;
   width: 80vw;
   display: flex;
   justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
 }
 
 .progress-item {
   height: 100px;
   width: 100px;
   background-color: rgb(255, 255, 255);
+  color: rgba(180, 180, 180);
+  font-style: inherit;
+  font-size: 2rem;
   font-weight: bold;
-  border: 0.5rem solid rgba(0, 0, 255, 0.75);
+  border: 0.5rem solid rgba(180, 180, 180);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.active {
+  border: 0.5rem solid rgba(0, 0, 255, 0.75);
+  color: rgba(0, 0, 255, 0.75);
+}
+
 .progress-bar {
-  background-color: rgba(0, 0, 255, 0.75);
+  background-color: rgb(210, 210, 210);
   height: 0.5rem;
   width: 80vw;
+  position: absolute;
+  z-index: -2;
+}
+
+.progress-bar::after {
+  content: '';
+  background-color: rgba(0, 0, 255, 0.75);
+  height: 0.5rem;
+  width: 20vw;
   position: absolute;
   z-index: -1;
 }
