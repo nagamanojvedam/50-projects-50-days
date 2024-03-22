@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 255, 0.75);
+}
+
+.search-container {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+#search-btn {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.search-icon {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.input-text-box {
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.hidden {
+  display: none;
+}
