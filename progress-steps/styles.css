@@ -54,20 +54,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border 
 }
 
 .active {
   color: var(--active-color);
   border: 0.25rem solid var(--active-color);
   font-weight: bold;
+  transition: border 0.4s ease;
 }
 
 .progress-bar {
-  width: 100px;
+  width: 0px;
   height: 0.25rem;
   background-color: var(--active-color);
   position: absolute;
   z-index: -1;
+  transition: width 0.2s ease;
 }
 .btn {
   font-style: inherit;
@@ -79,11 +82,15 @@ body {
   cursor: pointer;
 }
 
+.btn-active {
+  color: var(--content-bg-colog);
+  background-color: var(--active-color);
+}
+
 .btn:active {
   transform: scale(0.98);
 }
 
-.btn-active {
-  color: var(--content-bg-colog);
-  background-color: var(--active-color);
+.btn:disabled {
+  cursor: not-allowed;
 }
