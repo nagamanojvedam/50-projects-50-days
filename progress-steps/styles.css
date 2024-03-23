@@ -54,7 +54,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: border 
+  transition: border 0.2s ease;
 }
 
 .active {
