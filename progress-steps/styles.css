@@ -1,7 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
+:root {
+  --inactive-color: lightgray;
+  --content-bg-colog: rgb(238, 237, 237);
+  --active-color: rgba(0, 0, 255, 0.75);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Mulish';
+}
+
+.container {
+  text-align: center;
+  width: 400px;
+  height: 15vh;
+}
+
+.progress-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.progress-container::after {
+  content: '';
+  width: 400px;
+  height: 0.25rem;
+  background-color: var(--inactive-color);
+  position: absolute;
+  z-index: -2;
+}
+
+.progress-item {
+  width: 50px;
+  height: 50px;
+  font-size: 1.25rem;
+  background-color: var(--content-bg-colog);
+  border: 0.25rem solid var(--inactive-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  color: var(--active-color);
+  border: 0.25rem solid var(--active-color);
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 100px;
+  height: 0.25rem;
+  background-color: var(--active-color);
+  position: absolute;
+  z-index: -1;
+}
+.btn {
+  font-style: inherit;
+  font-size: inherit;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  background-color: var(--content-bg-colog);
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-active {
+  color: var(--content-bg-colog);
+  background-color: var(--active-color);
 }
