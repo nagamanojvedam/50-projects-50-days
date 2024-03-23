@@ -4,4 +4,5 @@ const containerEl = document.querySelector('.container');
 
 searchBtn.addEventListener('click', () => {
   inputBox.classList.toggle('hidden');
+  inputBox.focus();
 });
