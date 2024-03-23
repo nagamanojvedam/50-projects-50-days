@@ -10,6 +10,8 @@
 body {
   background-color: rgb(28, 28, 28);
   position: relative;
+  overflow-x: hidden;
+  z-index: -2;
 }
 
 .mb-1 {
@@ -21,11 +23,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transform-origin: top left;
+  transition: rotate 0.2s ease;
+}
+
+.rotate-container {
+  rotate: -20deg;
+  transition: rotate 0.2s ease;
 }
 
 .article {
   width: 60vw;
   padding: 3rem 0;
+  z-index: 0;
 }
 
 .image {
@@ -49,12 +60,12 @@ body {
   place-items: center;
 }
 
-.rotate-up {
+.rotate-menu-up {
   rotate: -90deg;
   transition: rotate 0.2s ease;
 }
 
-.rotate-down {
+.rotate-menu-down {
   rotate: 0deg;
   transition: rotate 0.2s ease;
 }
@@ -65,33 +76,42 @@ button {
   color: white;
   font-size: 2rem;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 
-.menu {
+.menu-outline {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.menu {
+  width: 250px;
+  height: 250px;
+  position: absolute;
   bottom: 0;
   left: 0;
-  transform: skewX(10deg);
+  z-index: -1;
 }
 
 ul {
+  height: inherit;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-}
-
-i,
-a {
   color: white;
   font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
+
+li {
+  margin-left: 20px;
+}
+
 i {
   margin-right: 20px;
 }
-a {
-  text-decoration: none;
-  margin-left: 20px;
-} */
