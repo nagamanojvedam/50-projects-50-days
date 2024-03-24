@@ -6,3 +6,25 @@
   box-sizing: border-box;
   font-family: 'Teko';
 }
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container {
+  height: 100vh;
+  background-image: url('./amg-gt.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blur-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  font-size: 2rem;
+}
