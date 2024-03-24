@@ -82,6 +82,14 @@ button {
   align-items: center;
 }
 
+#bars {
+  transform: translate(0, -8px);
+}
+
+#close {
+  transform: translate(15px, -10px);
+}
+
 .menu-outline {
   position: absolute;
   top: 0;
@@ -90,19 +98,28 @@ button {
 }
 
 .menu {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: -1;
+
+  transform: translateX(-100%);
+  transition: transform 0.2s linear;
+}
+
+.show-menu {
+  transform: translateX(0);
+  transition: transform 0.2s linear;
+  transition-delay: 0.3s;
 }
 
 ul {
   height: inherit;
   list-style: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -110,6 +127,15 @@ ul {
 
 li {
   margin-left: 20px;
+  width: 80%;
+}
+
+.menu ul li + li {
+  padding-left: 15px;
+}
+
+.menu ul li + li + li {
+  padding-left: 30px;
 }
 
 i {
