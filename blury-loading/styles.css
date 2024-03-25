@@ -13,9 +13,8 @@ body {
 
 .container {
   height: 100vh;
-  background-image: url('./amg-gt.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url('./amg-gt.jpg') no-repeat center;
+  filter: blur(50px);
 }
 
 .blur-container {
@@ -26,5 +25,5 @@ body {
   align-items: center;
   position: absolute;
   top: 0;
-  font-size: 2rem;
+  font-size: 50px;
 }
