@@ -1,21 +1,21 @@
-import { useState } from "react";
-import "./App.css";
+import { useState } from 'react';
+import './App.css';
 
-const weekday = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+const weekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
 
 const month = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
 ];
 
 export default function App() {
@@ -61,7 +61,11 @@ export default function App() {
         </button>
       </div>
       <div className="text-box">{`${
-        offSet ? `${offSet} days from today is` : `Today is`
+        offSet
+          ? `${Math.abs(offSet)} days ${
+              count < 0 ? `ago from today was` : `from today is`
+            }`
+          : `Today is`
       } ${weekday[date.getDay()]} ${
         month[date.getMonth()]
       } ${date.getDate()} ${date.getFullYear()}`}</div>
