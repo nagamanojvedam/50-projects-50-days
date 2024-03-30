@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css';
+import './AppV1.css';
 
 const weekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
 

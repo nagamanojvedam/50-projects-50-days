@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu";
+  font-size: 1.25rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.app {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.step input {
+  margin-right: 20px;
+}
+
+.item {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item input {
+  width: 10vw;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.para {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
