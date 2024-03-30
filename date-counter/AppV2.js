@@ -36,6 +36,11 @@ export default function App() {
   function handleIncreaseCount() {
     setCount((curr) => curr + 1);
   }
+
+  function handleReset() {
+    setStep(1);
+    setCount(0);
+  }
   return (
     <div className="app">
       <div className="step">
@@ -43,10 +48,10 @@ export default function App() {
           type="range"
           min={1}
           max={10}
-          defaultValue={1}
+          value={step}
           onChange={handleStep}
         />
-        <p>{step}</p>
+        <p>Step: {step}</p>
       </div>
       <div className="item">
         <button onClick={handleDecreaseCount}>-</button>
@@ -64,6 +69,12 @@ export default function App() {
           month[date.getMonth()]
         } ${date.getDate()} ${date.getFullYear()}`}
       </p>
+      <button
+        className={`${step !== 1 || count !== 0 ? "" : "hide"}`}
+        onClick={handleReset}
+      >
+        Reset
+      </button>
     </div>
   );
 }
