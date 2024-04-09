@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
   margin: 0;
@@ -7,7 +7,77 @@
 }
 
 body {
-  font-style: 'Poppins';
-  display: flex;
+  font-family: 'Roboto';
+}
+
+.container {
+  height: 100vh;
   position: relative;
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: url('images/ps5-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.left::before,
+.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+.right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  background: url('images/xbox-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  border: 0.175rem solid white;
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+}
+.left a:hover {
+  background-color: rgba(25, 25, 221, 0.5);
+}
+
+.right a:hover {
+  background-color: rgba(0, 255, 42, 0.5);
+}
+
+h2 {
+  color: white;
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+.box.left h2,
+.box.right h2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box.left a,
+.box.right a {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
 }
