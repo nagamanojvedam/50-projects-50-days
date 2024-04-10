@@ -35,23 +35,27 @@ body {
 
 .form-control input {
   width: 100%;
-  padding: 5px 10px;
+  padding: 5px 0px;
   font-size: 1rem;
+  color: white;
   background-color: inherit;
   border: none;
   border-bottom: 2px solid white;
 }
 
-.form-control input:focus {
+.form-control input:focus,
+.form-control input:valid {
   outline: none;
+  border-color: lightblue;
 }
 
 .form-control label {
   position: absolute;
   top: 5px;
-  left: 10px;
+  left: 0;
   color: white;
   font-size: 1rem;
+  pointer-events: none;
 }
 
 .container .btn {
@@ -77,4 +81,15 @@ body {
 .container a {
   text-decoration: none;
   color: yellow;
+}
+
+.form-control label span {
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-1.5rem);
 }
