@@ -7,9 +7,34 @@
 }
 
 body {
-  font-style: 'Whisper';
+  font-family: 'Whisper';
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rebeccapurple;
+}
+
+.container {
+  width: 70%;
+  height: 30%;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: skyblue;
+  border-radius: 5px;
+}
+
+.box {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: pink;
+  color: purple;
+  border-radius: 5px;
+}
+
+.box:active {
+  transform: scale(0.98);
 }
