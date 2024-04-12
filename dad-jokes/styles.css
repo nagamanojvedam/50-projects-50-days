@@ -12,4 +12,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(137, 43, 226, 0.5);
+}
+
+.container {
+  text-align: center;
+  font-size: 1.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.container h3,
+.container p,
+.container button {
+  margin: 2rem;
+}
+
+#title {
+  color: rgb(136, 136, 136);
+}
+
+#joke {
+  font-weight: bold;
+}
+.btn {
+  font-family: inherit;
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  border: none;
+  background-color: rgba(128, 0, 128, 0.8);
+  color: white;
+  border-radius: 5px;
+}
+
+.btn:active {
+  transform: scale(0.98);
 }
