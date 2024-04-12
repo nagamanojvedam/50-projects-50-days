@@ -14,6 +14,17 @@ body {
   align-items: center;
 }
 
+.box {
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 1rem 2rem;
+}
+
+.second {
+  display: flex;
+  gap: 2rem;
+}
+
 .hidden {
   display: none;
 }
