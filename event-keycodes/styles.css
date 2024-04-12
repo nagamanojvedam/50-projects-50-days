@@ -23,6 +23,11 @@ body {
 .second {
   display: flex;
   gap: 2rem;
+  position: relative;
+}
+
+.second small {
+  position: absolute;
 }
 
 .hidden {
