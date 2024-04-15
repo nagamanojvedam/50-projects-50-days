@@ -1,3 +1,9 @@
 'use strict';
 
-console.log('faq collapse');
+const toggleBtns = document.querySelectorAll('.faq-toggle button');
+
+console.log(toggleBtns);
+
+toggleBtns.forEach((toggle) => {
+  toggle.addEventListener('click', () => {});
+});

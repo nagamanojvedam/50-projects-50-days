@@ -13,11 +13,50 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(235, 235, 235);
 }
 
 .faq-heading {
+}
+
+.faq-container {
+}
+
+.faq-item {
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  background-color: transparent;
+  border-radius: 5px;
+  position: relative;
+}
+
+.faq-item.active {
+  background-color: white;
+}
+
+.faq-question {
+  margin-bottom: 20px;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-answer {
+  margin-bottom: 10px;
+  display: none;
+}
+
+.faq-toggle {
   position: absolute;
-  top: 3rem;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 20px;
+  right: -10px;
+}
+
+.faq-toggle button {
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
 }
