@@ -7,9 +7,96 @@
 }
 
 body {
-  height: 100vh;
+  font-family: 'Poppins';
+  background-color: gainsboro;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq {
+  background-color: transparent;
+  margin: 30px 0;
+  padding: 20px 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.faq.active {
+  background-color: white;
+  overflow: hidden;
+}
+
+.faq.active::after,
+.faq.active::before {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+}
+
+.faq.active::after {
+  color: green;
+  bottom: 5px;
+  left: 20px;
+}
+
+.faq.active::before {
+  color: blue;
+  top: -25px;
+  left: -25px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin-bottom: 30px;
+}
+
+.faq-text {
+  display: none;
+}
+.faq-toggle {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  height: 20px;
+  width: 20px;
+  font-size: 0.75rem;
+  border-radius: 50%;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Poppins';
+  cursor: pointer;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq.active .faq-toggle {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  display: block;
+  color: white;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
 }
