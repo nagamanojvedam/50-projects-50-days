@@ -9,7 +9,7 @@ const highScoreEl = document.querySelector('.highscore');
 const numberEl = document.querySelector('.number');
 const messageEl = document.querySelector('.message');
 
-const randomNumber = Math.floor(Math.random() * 20) + 1;
+let randomNumber = Math.floor(Math.random() * 20) + 1;
 
 let currScore = 20;
 let highScore = 0;
@@ -60,4 +60,5 @@ againBtn.addEventListener('click', () => {
 
   guessedNumber.value = ``;
   checkBtn.disabled = false;
+  randomNumber = Math.floor(Math.random() * 20) + 1;
 });
