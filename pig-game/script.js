@@ -27,23 +27,38 @@ newGameBtn.addEventListener('click', () => {
 
 rollBtn.addEventListener('click', () => {
   const rolledDice = Math.trunc(Math.random() * 6) + 1;
+  diceImgEl.src = `dice-${rolledDice}.png`;
 
   if (rolledDice === 1) {
     // set current score to 0
     currentScore = 0;
+    currentPlayer === 0
+      ? (current0El.textContent = currentScore)
+      : (current1El.textContent = currentScore);
     // change player
     changePlayer();
   } else {
     currentScore += rolledDice;
     diceImgEl.src = `dice-${rolledDice}.png`;
+    currentPlayer === 0
+      ? (current0El.textContent = currentScore)
+      : (current1El.textContent = currentScore);
   }
-
-  checkWinner();
 });
 
 holdBtn.addEventListener('click', () => {
   // update player score
+  player[currentPlayer] += currentScore;
+  // check winner
+  checkWinner();
+  currentPlayer === 0
+    ? (score0El.textContent = player[currentPlayer])
+    : (score1El.textContent = player[currentPlayer]);
   // set current score to 0
+  currentScore = 0;
+  currentPlayer === 0
+    ? (current0El.textContent = currentScore)
+    : (current1El.textContent = currentScore);
   // change player
   // change the active class to respective player
   changePlayer();
@@ -52,6 +67,8 @@ holdBtn.addEventListener('click', () => {
 function changePlayer() {
   // toggle current player
   currentPlayer = currentPlayer === 0 ? 1 : 0;
+  player0BoardEl.classList.toggle('player--active');
+  player1BoardEl.classList.toggle('player--active');
 }
 
 function resetGame() {
@@ -69,15 +86,23 @@ function resetGame() {
   player1BoardEl.classList.remove('active');
   player0BoardEl.classList.add('active');
   // remove winner class to player
-  player0BoardEl.classList.remove('winner');
-  player1BoardEl.classList.remove('winner');
+  player0BoardEl.classList.remove('player--winner');
+  player1BoardEl.classList.remove('player--winner');
+  // enable roll and hold buttons
+  rollBtn.disabled = false;
+  holdBtn.disabled = false;
 }
 
 function updateUI() {}
 
 function checkWinner() {
-  if (player[currentPlayer] > 100) {
+  if (player[currentPlayer] >= 10) {
     // update player
+    currentPlayer === 0
+      ? player0BoardEl.classList.add('player--winner')
+      : player1BoardEl.classList.add('player--winner');
     // disable roll and hold buttons
+    rollBtn.disabled = true;
+    holdBtn.disabled = true;
   }
 }
