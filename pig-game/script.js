@@ -14,6 +14,9 @@ let player = [0, 0];
 let currentPlayer = 0;
 let currentScore = 0;
 
+const MAX_DICE_ROLLED = 6;
+const MAX_SCORE = 100;
+
 resetGame();
 
 newGameBtn.addEventListener('click', () => {
@@ -21,7 +24,7 @@ newGameBtn.addEventListener('click', () => {
 });
 
 rollBtn.addEventListener('click', () => {
-  const rolledDice = Math.trunc(Math.random() * 6) + 1;
+  const rolledDice = Math.trunc(Math.random() * MAX_DICE_ROLLED) + 1;
   diceImgEl.src = `dice-${rolledDice}.png`;
 
   currentScore = rolledDice === 1 ? changePlayer() : currentScore + rolledDice;
@@ -52,7 +55,7 @@ function resetGame() {
   player = [0, 0];
   currentScore = 0;
 
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < player.length; i++) {
     scoresEl[i].textContent = '0';
     playersBoardEl[i].classList.remove('player--active');
     playersBoardEl[i].classList.remove('player--winner');
@@ -64,7 +67,7 @@ function resetGame() {
 }
 
 function checkWinner() {
-  if (player[currentPlayer] >= 100) {
+  if (player[currentPlayer] >= MAX_SCORE) {
     playersBoardEl[currentPlayer].classList.add('player--winner');
 
     disableButtons();
