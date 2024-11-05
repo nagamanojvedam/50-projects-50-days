@@ -1,15 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: 'Poppins';
+  background-color: rgba(0, 0, 255, 0.819);
+  color: white;
+}
+.container {
+  font-family: 'Muli';
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+h3 {
+  margin: 10px 0 20px;
+}
+#textarea {
+  border: none;
+  border-radius: 10px;
+  width: 500px;
+  height: 200px;
+  padding: 15px;
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+
+.tag {
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 20px;
+  background-color: rgb(42, 42, 171);
+}
+.highlighted {
+  background-color: rgba(255, 166, 0, 0.878);
 }
