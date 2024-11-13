@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+:root {
+  --background-color: #3494e4;
+  --border-color: rgb(33, 55, 177);
+  --empty-color: white;
+  --filled-color: rgb(46, 149, 180);
+  --full-text-color: white;
+  --empty-text-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat';
+  background-color: var(--background-color);
+  color: var(--border-color);
+  height: 100vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+h1 {
+  font-size: 4rem;
+  margin: 0 0 20px;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.bottle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 3px solid var(--border-color);
+  background-color: var(--empty-color);
+}
+
+.large {
+  height: 320px;
+  width: 160px;
+  border-radius: 0 0 40px 40px;
+  margin-bottom: 30px;
+}
+
+.small {
+  height: 120px;
+  width: 60px;
+  border-radius: 0 0 15px 15px;
+  transition: 0.3s ease;
+}
+.text {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.bottles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.remaining {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.remaining span {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.remaining small {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+
+.consumed {
+  width: 100%;
+  border-radius: 0 0 37px 37px;
+  height: 0;
+  background-color: var(--filled-color);
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.full {
+  background-color: var(--filled-color);
+  color: var(--full-text-color);
+}
